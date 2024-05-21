@@ -66,8 +66,23 @@ public class FileManager
     private bool IsEnoughSpace(string data)
     {
         long jsonDataSize = Encoding.UTF8.GetByteCount(data);
+        long availableSpace = GetAvailableStorageSpace();
+        return availableSpace > jsonDataSize;
+    }
+
+    private long GetAvailableStorageSpace()
+    {
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            using AndroidJavaClass statFsClass = new("android.os.StatFs");
+            using AndroidJavaObject statFs = new("android.os.StatFs", Application.persistentDataPath);
+            long blockSize = statFs.Call<long>("getBlockSizeLong");
+            long availableBlocks = statFs.Call<long>("getAvailableBlocksLong");
+            return blockSize * availableBlocks;
+        }
+
         DriveInfo driveInfo = new(Path.GetPathRoot(Application.persistentDataPath));
-        return driveInfo.IsReady && driveInfo.AvailableFreeSpace > jsonDataSize;
+        return driveInfo.IsReady ? driveInfo.AvailableFreeSpace : 0;
     }
 
     public string GetFilePath(int index)

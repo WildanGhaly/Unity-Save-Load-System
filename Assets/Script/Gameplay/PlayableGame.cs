@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayableGame : MonoBehaviour
 {
     [SerializeField] private CharacterPlayable characterPlayable;
+    [SerializeField] private GameObject pillars;
 
     private void OnEnable()
     {
@@ -22,6 +23,7 @@ public class PlayableGame : MonoBehaviour
     public void Restart()
     {
         characterPlayable.GetComponent<Transform>().localPosition = new Vector3(-6.25f, -0.2f, -0.038f);
+        GetComponent<PillarSpawner>().DestroyAllPillars();
         Continue();
     }
 

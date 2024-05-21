@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: "Supporting Tech Engineer Staff \u2013 Hidayatullah Wildan Ghaly Buchary"
+  productName: "Supporting Tech Engineer Staff - Hidayatullah Wildan Ghaly Buchary"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -860,10 +860,10 @@ PlayerSettings:
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: "Supporting Tech Engineer Staff \u2013 Hidayatullah
+  metroApplicationDescription: "Supporting Tech Engineer Staff - Hidayatullah
     Wildan Ghaly Buchary"
   wsaImages: {}
-  metroTileShortName: "Supporting Tech Engineer Staff \u2013 Hidayat"
+  metroTileShortName: "Supporting Tech Engineer Staff - Hidayat"
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -932,7 +932,7 @@ PlayerSettings:
   cloudProjectId: cd352f6e-e3c6-403b-affd-c1aa23ce70b2
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: "Supporting Tech Engineer Staff \u2013 Hidayatullah Wildan Ghaly Buchary"
+  projectName: "Supporting Tech Engineer Staff - Hidayatullah Wildan Ghaly Buchary"
   organizationId: wildanghaly
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

@@ -26,9 +26,9 @@ public class PillarSpawner : MonoBehaviour
         }
     }
 
-    private void DestroyAllChildren(Transform parent)
+    public void DestroyAllPillars()
     {
-        foreach (Transform child in parent)
+        foreach (Transform child in pillarSpawner)
         {
             Destroy(child.gameObject);
         }
@@ -37,6 +37,6 @@ public class PillarSpawner : MonoBehaviour
     private void OnDisable()
     {
         StopAllCoroutines();
-        DestroyAllChildren(pillarSpawner);
+        DestroyAllPillars();
     }
 }
